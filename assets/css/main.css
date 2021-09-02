@@ -75,14 +75,19 @@ input, select, textarea {
 .collapsible {
 	cursor: pointer;
   }
+
   
-  
-  .content {
-	padding: 0 18px;
-	display: none;
-	overflow: hidden;
-	background-color: #f1f1f1;
-  }
+
+.collapse:not(.show) {
+    display: none
+}
+
+.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: height .35s ease
+}
 
   .alignleft {
 
@@ -127,6 +132,7 @@ input, select, textarea {
 		-ms-transition: color .2s ease-in-out;
 		transition: color .2s ease-in-out;
 		color: #007bff;
+		text-decoration: none;
 	}
 
 		a:hover {
@@ -1592,7 +1598,7 @@ input, select, textarea {
 
 	table {
 		width: 100%;
-		font-size: large;
+		font-size: 1.1em;
 		text-align: left;
 	}
 
@@ -2162,7 +2168,6 @@ input, select, textarea {
 
 			#top p a {
 				color: #007bff;
-				text-decoration: none;
 			}
 
 	#contact footer {
@@ -2236,7 +2241,6 @@ input, select, textarea {
 					margin: 2em 0 0 0;
 					padding: 2em 0 2em 0;
 				}
-				
 
 		/* Articles */
 
